@@ -18,8 +18,8 @@ var mapOptions = {
   };
 
   var map = new google.maps.Map(document.getElementById('map_canvas'), mapOptions);
-  
-   
+
+
   var marker = new google.maps.Marker({
       position: myLatLng,
       map: map,
@@ -29,7 +29,7 @@ var mapOptions = {
   
   var contentString = '<div style="max-width: 300px" id="content">'+
       '<div id="bodyContent">'+
-	  '<h4>Jahdiel Santander</h4>' +
+	  '<h4>Nuestra empresa</h4>' +
       '<p style="font-size: 12px">Urb. Banco de la Nación F-25 cercado, Arequipa-Perú<br>Oficina de co-working<br>AQP-UP.</p>'+
       '</div>'+
       '</div>';
@@ -37,7 +37,7 @@ var mapOptions = {
   var infowindow = new google.maps.InfoWindow({
       content: contentString
   });
-  
+
   google.maps.event.addListener(marker, 'click', function() {
     infowindow.open(map,marker);
   });
